@@ -1,0 +1,26 @@
+package br.com.lduran.testes;
+
+import java.util.*;
+
+public class TesteComparable
+{
+	public static void main(String[] args)
+	{
+		Set nomes = new TreeSet();
+		nomes.add("João");
+		nomes.add("Maria");
+		nomes.add("Ana Paula");
+		nomes.add("Amanda");
+		nomes.add("João");
+
+		Iterator iterator = nomes.iterator();
+
+		int i = 0;
+		System.out.println("Lista em ordem alfabética dos Nomes: \n");
+		while (iterator.hasNext())
+		{
+			String nome = (String) iterator.next();
+			System.out.println("Nome [" + i++ + "] " + nome);
+		}
+	}
+}
