@@ -1,0 +1,5 @@
+cd C:\eclipse-workspace\Academia Java\aj02_lab12_01\target\classes
+
+Atualizar conteúdo do arquivo Manifest.MF
+jar -cvfm simulacao.jar META-INF/Manifest.MF br
+java -jar simulacao.jar 1300.00 0.016 12
