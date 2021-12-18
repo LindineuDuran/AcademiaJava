@@ -6,4 +6,3 @@
 - [AJ4 - APIs Avançadas: Swing, I/O e Threads]()
 - [AJ5 - Desenvolvimento de aplicativos Web com JSP e Servlet]()
 - [AJ-Lambda-Streams]()
-- [Globalcode - Revisão para Certificação]
