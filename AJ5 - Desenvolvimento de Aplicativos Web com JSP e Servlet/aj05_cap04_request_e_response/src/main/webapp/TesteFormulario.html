@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Testa Formulário</title>
+	</head>
+	<body>
+		<!-- Este form redireciona para lerdados, que como veremos adiante, foi mapeado no web.xml para o Servlet LerDados.
+		Estamos enviando os dados via GET, mas poderiamos fazê-lo via POST trocando  met -->
+		
+		<form name = "formCadastroUsuario" method = "GET" action="lerdados">
+			<p>Nome: <input type = "text" name = "textNome" /></p>
+			<p>Email: <input type = "text" name = "textEmail" /></p>
+			<p><input type = "submit" value = "Salvar" /></p>
+		</form>
+	</body>
+</html>

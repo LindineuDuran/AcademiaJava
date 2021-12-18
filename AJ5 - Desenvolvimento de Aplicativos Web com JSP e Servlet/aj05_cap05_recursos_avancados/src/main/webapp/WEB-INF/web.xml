@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+           http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<context-param>
+		<description>servidor padrao de banco de dados</description>
+		<param-name>database_default_server</param-name>
+		<param-value>127.0.0.1</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>ContextServlet</servlet-name>
+		<servlet-class>aj05_cap05_recursos_avancados.servlets.TesteParametrosGlobais
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>BuscaUsuarios</servlet-name>
+		<servlet-class>aj05_cap05_recursos_avancados.servlets.BuscaUsuarios
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ListaUsuarios</servlet-name>
+		<servlet-class>aj05_cap05_recursos_avancados.servlets.ListaUsuarios
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ConfigServlet</servlet-name>
+		<servlet-class>aj05_cap05_recursos_avancados.servlets.TesteServletConfig
+		</servlet-class>
+		<init-param>
+			<description>versao do sistema</description>
+			<param-name>version</param-name>
+			<param-value>3.0</param-value>
+		</init-param>
+		<init-param>
+			<description>localidade padrao do sistema</description>
+			<param-name>default_locale</param-name>
+			<param-value>pt_BR</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContextServlet</servlet-name>
+		<url-pattern>/usandoContext</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>BuscaUsuarios</servlet-name>
+		<url-pattern>/buscaUsuarios</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ListaUsuarios</servlet-name>
+		<url-pattern>/listaUsuarios</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ConfigServlet</servlet-name>
+		<url-pattern>/usandoConfig</url-pattern>
+	</servlet-mapping>
+</web-app>
